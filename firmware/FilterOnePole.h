@@ -1,7 +1,7 @@
 #ifndef FilterOnePole_h
 #define FilterOnePole_h
 
-#include <Arduino.h>
+#include "application.h"
 
 enum FILTER_TYPE {
   HIGHPASS,
