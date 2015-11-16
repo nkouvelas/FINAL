@@ -1,5 +1,5 @@
 #include "FilterDerivative.h"
-#include "Arduino.h"
+#include "application.h"
 
 float FilterDerivative::input( float inVal ) {
   long thisUS = micros();
