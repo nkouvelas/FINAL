@@ -1,6 +1,6 @@
 #ifndef FilterTwoPole_h
 #define FilterTwoPole_h
-#include <Arduino.h>
+#include "application.h"
 #define ATTODUINO
 
 enum OSCILLATOR_TYPE {
