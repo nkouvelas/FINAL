@@ -4,6 +4,7 @@
 #include "application.h"
 #include <math.h>
 #define TWO_PI  6.28
+#define PI 3.14
 enum FILTER_TYPE {
   HIGHPASS,
   LOWPASS,
