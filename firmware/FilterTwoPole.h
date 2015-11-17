@@ -1,8 +1,10 @@
 #ifndef FilterTwoPole_h
 #define FilterTwoPole_h
-#include <Arduino.h>
+#include "application.h"
+#include <math.h>
 #define ATTODUINO
-
+#define TWO_PI  6.28
+#define PI 3.14
 enum OSCILLATOR_TYPE {
   LOWPASS_BESSEL,
   //HIGHPASS_BESSEL,
