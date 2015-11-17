@@ -132,7 +132,7 @@ float FilterTwoPole::input( float drive ) {
   // the answer will be incorrect, regardless.
   dt = constrain( dt, 0, 1.0/W0 );
 
-  float A = sq(W0)*drive - W0/Q*Vprev - sq(W0)*X; // *** compute acceleration
+  float A = (W0*W0)*drive - W0/Q*Vprev - sq(W0)*X; // *** compute acceleration
   float V = Vprev + A * dt;                       // step velocity
   Vavg = .5*(V+Vprev);
   X += Vavg * dt;                                 // step position, using average V to reduce error
@@ -159,7 +159,7 @@ float FilterTwoPole::getMaxAmp() {
   // first, calculate the energy
   // E = 0.5*w0*x² + 0.5*v²/w0
   
-  float E = 0.5 * W0 * sq(X) + 0.5 * sq(Vprev) / W0;
+  float E = 0.5 * W0 * (X * X) + 0.5 * (Vprev * Vprev) / W0;
   
   // calculate use this to calculate max amplitude
   // E = 0.5*w0*x²
