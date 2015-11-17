@@ -132,7 +132,7 @@ float FilterTwoPole::input( float drive ) {
   // the answer will be incorrect, regardless.
   dt = constrain( dt, 0, 1.0/W0 );
 
-  float A = (W0*W0)*drive - W0/Q*Vprev - sq(W0)*X; // *** compute acceleration
+  float A = (W0 * W0)*drive - W0/Q*Vprev - (W0 * W0)*X; // *** compute acceleration
   float V = Vprev + A * dt;                       // step velocity
   Vavg = .5*(V+Vprev);
   X += Vavg * dt;                                 // step position, using average V to reduce error
